@@ -25,16 +25,18 @@
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
                 <div class="card">
+                    <div class="alert" id="alert" style="display: none;" role="alert"> 
+                    </div>
                     <div class="card-header text-muted text-center">Cadastro de Pessoa</div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-4">
                                 <label for="name" class="form-label">Nome</label>
-                                <input type="text" class="form-control" id="name" placeholder="Digite seu nome">
+                                <input type="text" class="form-control input-validate" id="name" placeholder="Digite seu nome">
                             </div>
                             <div class="col-sm-4">
                                 <label for="document" class="form-label">CPF</label>
-                                <input type="text" class="form-control" id="document" placeholder="111.111.111-11">
+                                <input type="text" class="form-control input-validate" id="document" placeholder="111.111.111-11">
                             </div>
                             <div class="col-sm-4">
                                 <label for="gender" class="form-label">Sexo</label>
@@ -46,7 +48,7 @@
                         </div>
                     </div>
                     <div class="card-footer text-end">
-                        <button type="button" class="btn btn-danger">Cadastrar</button>
+                        <button type="button" class="btn btn-danger" id="send">Cadastrar</button>
                     </div>
                 </div>
             </div>
@@ -66,23 +68,23 @@
                             <th scope="col">Deletar</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="table-user">
                         <tr>
                             <th scope="row">1</th>
                             <td>Pedro Neves de Oliveira</td>
-                            <td>408.157.448-03</td>
+                            <td class="document">408.157.448-03</td>
                             <td>Masculino</td>
                             <td>
-                                <button type="button" class="btn btn-danger">Excluir</button>
+                                <button type="button" class="btn btn-danger btn-delete">Excluir</button>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">2</th>
                             <td>Pedro Neves de Oliveira</td>
-                            <td>408.157.448-03</td>
+                            <td class="document">408.157.448-03</td>
                             <td>Masculino</td>
                             <td>
-                                <button type="button" class="btn btn-danger">Excluir</button>
+                                <button type="button" class="btn btn-danger btn-delete">Excluir</button>
                             </td>
                         </tr>
                     </tbody>
