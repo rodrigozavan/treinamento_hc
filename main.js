@@ -46,12 +46,18 @@ function showMsg(type, message) {
         alertMsg.classList.add("alert-danger")
         alertMsg.textContent = message
         alertMsg.style.display = ''
+        setTimeout(() => {
+            alertMsg.style.display = 'none'
+        }, 2300);
 
     } else if (type == 'success'){
         alertMsg.classList.remove("alert-danger")
         alertMsg.classList.add("alert-success")
         alertMsg.textContent = message
         alertMsg.style.display = ''
+        setTimeout(() => {
+            alertMsg.style.display = 'none'
+        }, 2300);
     }
 }
 
@@ -83,16 +89,19 @@ function validLenthDoc(doc) {
 }
 
 function addUser(name, doc, sex) {
+
     if (sex.value == '1') {
         sex = 'Masculino'
     }else{
         sex = 'Feminino'
     }
 
+    new_doc = `${doc.value.slice(0,3)}.${doc.value.slice(3,6)}.${doc.value.slice(6,9)}-${doc.value.slice(9,11)}`
+
     let template = `
     <th scope="row">3</th>
     <td>${name.value}</td>
-    <td class="document">${doc.value}</td>
+    <td class="document">${new_doc}</td>
     <td>${sex}</td>
     <td>
         <button type="button" class="btn btn-danger btn-delete">Excluir</button>
